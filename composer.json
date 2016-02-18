@@ -1,0 +1,21 @@
+{
+    "name": "apollopy/laravel-x-eloquent",
+    "description": "Enhanced Eloquent for Laravel 5.1",
+    "keywords": ["laravel", "eloquent"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ApolloPY",
+            "email": "ApolloPY@Gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/database": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ApolloPY\\Eloquent\\": "src/"
+        }
+    }
+}
