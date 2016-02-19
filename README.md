@@ -31,6 +31,17 @@ $posts = $posts->sortByIds($ids); // collection -> [2 => 3, 0 => 1, 1 => 2]
 $posts = $posts->values(); // collection -> [3, 1, 2]
 ```
 
+### casts
+
+```php
+class Post extends Model
+{
+    protected $casts = [
+        'contents' => 'base64', // auto base64_encode and base64_decode, fixed save emoji to mysql
+    ];
+}
+```
+
 ## IDE Helper
 
 if installed barryvdh/laravel-ide-helper
