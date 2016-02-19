@@ -42,6 +42,45 @@ class Post extends Model
 }
 ```
 
+## Model make command
+
+edit config/app.php
+
+```php
+// config/app.php
+
+'aliases' => [
+    // 'Eloquent'   => Illuminate\Database\Eloquent\Model::class,
+    'Eloquent'   => ApolloPY\Eloquent\Model::class,
+],
+
+'providers' => [
+    ApolloPY\Eloquent\ModelMake\ModelMakeServiceProvider::class,
+]
+```
+
+using the make:model Artisan command
+
+```bash
+php artisan make:model A
+```
+
+The A class:
+
+```php
+<?php
+
+namespace App;
+
+use Eloquent as Model;
+
+class A extends Model
+{
+    //
+}
+
+```
+
 ## IDE Helper
 
 if installed barryvdh/laravel-ide-helper
@@ -49,9 +88,11 @@ if installed barryvdh/laravel-ide-helper
 edit the config file: config/ide-helper.php
 
 ```php
-    'extra' => array(
-        // add 'ApolloPY\Eloquent\Builder'
-        'Eloquent' => array('ApolloPY\Eloquent\Builder', 'Illuminate\Database\Eloquent\Builder', 'Illuminate\Database\Query\Builder'),
-        'Session' => array('Illuminate\Session\Store'),
-    ),
+// config/ide-helper.php
+
+'extra' => [
+    // add 'ApolloPY\Eloquent\Builder'
+    'Eloquent' => ['ApolloPY\Eloquent\Builder', 'Illuminate\Database\Eloquent\Builder', 'Illuminate\Database\Query\Builder'],
+    'Session'  => ['Illuminate\Session\Store'],
+],
 ```
