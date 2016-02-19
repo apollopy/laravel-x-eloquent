@@ -2,7 +2,7 @@
 
 namespace ApolloPY\Eloquent;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as BaseModel;
 use Illuminate\Database\Eloquent\Collection as BaseCollection;
 
 /**
@@ -21,7 +21,7 @@ class Collection extends BaseCollection
     {
         $ids = array_flip($ids);
         return $this->sort(function ($a, $b) use ($ids) {
-            if ($a instanceof Model && $b instanceof Model) {
+            if ($a instanceof BaseModel && $b instanceof BaseModel) {
                 return $ids[$a->getKey()] - $ids[$b->getKey()];
             } else {
                 return $ids[data_get($a, 'id')] - $ids[data_get($b, 'id')];
