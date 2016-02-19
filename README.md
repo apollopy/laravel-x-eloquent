@@ -83,7 +83,7 @@ class A extends Model
 
 ## IDE Helper
 
-if installed barryvdh/laravel-ide-helper
+if installed [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper)
 
 edit the config file: config/ide-helper.php
 
