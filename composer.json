@@ -1,6 +1,6 @@
 {
     "name": "apollopy/laravel-x-eloquent",
-    "description": "Enhanced Eloquent for Laravel 5.1",
+    "description": "Enhanced Eloquent for Laravel",
     "keywords": ["laravel", "eloquent"],
     "license": "MIT",
     "authors": [
@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.5.9",
-        "illuminate/database": "5.1.*"
+        "illuminate/database": "5.1.*|5.2.*"
     },
     "autoload": {
         "psr-4": {
