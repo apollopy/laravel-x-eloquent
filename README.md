@@ -42,6 +42,14 @@ class Post extends Model
 }
 ```
 
+### chunkByTime
+
+```php
+Topic::where('user_id', 1)->chunkByTime(3600, function ($topics) {
+    //
+});
+```
+
 ## Model make command
 
 edit config/app.php
