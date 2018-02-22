@@ -42,32 +42,6 @@ class Post extends Model
 }
 ```
 
-### getAffectedRows
-
-Get the number of affected rows in a previous write operation. when use transaction, you may need.
-
-For SoftDeletes `use ApolloPY\Eloquent\SoftDeletes;`
-
-```php
-$obj1 = Post::find(1);
-$obj2 = clone $obj1;
-
-$obj1->content = 'aaa';
-$obj2->content = 'aaa';
-
-$obj1->save(); // return true
-$obj2->save(); // return true
-
-$obj1->getAffectedRows(); // return 1
-$obj2->getAffectedRows(); // return 0
-
-$obj2->delete(); // return true
-$obj1->delete(); // return true
-
-$obj1->getAffectedRows(); // return 0
-$obj2->getAffectedRows(); // return 1
-```
-
 ## Model make command
 
 edit config/app.php
