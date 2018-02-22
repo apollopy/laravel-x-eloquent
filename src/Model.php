@@ -15,6 +15,17 @@ use Illuminate\Database\Eloquent\Builder as BaseBuilder;
 abstract class Model extends BaseModel
 {
     /**
+     * Create a new Eloquent query builder for the model.
+     *
+     * @param  \Illuminate\Database\Query\Builder  $query
+     * @return \ApolloPY\Eloquent\Builder|static
+     */
+    public function newEloquentBuilder($query)
+    {
+        return new Builder($query);
+    }
+
+    /**
      * Create a new Eloquent Collection instance.
      *
      * @param array $models
