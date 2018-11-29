@@ -5,11 +5,11 @@ namespace ApolloPY\Eloquent\Traits;
 use ApolloPY\Eloquent\Builder;
 
 /**
- * UseXEloquentBuilder trait.
+ * UseEloquentBuilder trait.
  *
  * @author ApolloPY <ApolloPY@Gmail.com>
  */
-trait UseXEloquentBuilder
+trait UseEloquentBuilder
 {
     /**
      * Create a new Eloquent query builder for the model.

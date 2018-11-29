@@ -23,11 +23,11 @@ $posts = $posts->values(); // collection -> [3, 1, 2]
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use ApolloPY\Eloquent\Traits\UseXEloquentBuilder;
+use ApolloPY\Eloquent\Traits\UseEloquentBuilder;
 
 class Topic extends Model
 {
-    use UseXEloquentBuilder;
+    use UseEloquentBuilder;
 }
 
 
