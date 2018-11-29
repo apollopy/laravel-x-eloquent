@@ -2,9 +2,7 @@
 
 namespace ApolloPY\Eloquent;
 
-use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model as BaseModel;
-use Illuminate\Database\Eloquent\Builder as BaseBuilder;
 
 /**
  * Model class
@@ -23,17 +21,6 @@ abstract class Model extends BaseModel
     public function newEloquentBuilder($query)
     {
         return new Builder($query);
-    }
-
-    /**
-     * Create a new Eloquent Collection instance.
-     *
-     * @param array $models
-     * @return \ApolloPY\Eloquent\Collection
-     */
-    public function newCollection(array $models = [])
-    {
-        return new Collection($models);
     }
 
     /**
