@@ -6,6 +6,13 @@
 composer require apollopy/laravel-x-eloquent
 ```
 
+After updating composer, add the service provider to the `providers` array in `config/app.php`
+
+```php
+ApolloPY\Eloquent\EloquentServiceProvider::class,
+```
+**Laravel 5.5** uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
+
 ## Extension
 
 ### sortByIds
