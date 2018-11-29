@@ -1,16 +1,15 @@
 <?php
 
-namespace ApolloPY\Eloquent;
+namespace ApolloPY\Eloquent\Traits;
 
-use Illuminate\Database\Eloquent\Model as BaseModel;
+use ApolloPY\Eloquent\Builder;
 
 /**
- * Model class
+ * UseXEloquentBuilder trait.
  *
- * @author  ApolloPY <ApolloPY@Gmail.com>
- * @package ApolloPY\Eloquent
+ * @author ApolloPY <ApolloPY@Gmail.com>
  */
-abstract class Model extends BaseModel
+trait UseXEloquentBuilder
 {
     /**
      * Create a new Eloquent query builder for the model.
@@ -22,5 +21,4 @@ abstract class Model extends BaseModel
     {
         return new Builder($query);
     }
-
 }

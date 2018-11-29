@@ -6,20 +6,6 @@
 composer require apollopy/laravel-x-eloquent
 ```
 
-## Use
-
-```php
-namespace App;
-
-use ApolloPY\Eloquent\Model;
-// use Illuminate\Database\Eloquent\Model;
-
-class Post extends Model
-{
-    //
-}
-```
-
 ## Extension
 
 ### sortByIds
@@ -34,6 +20,17 @@ $posts = $posts->values(); // collection -> [3, 1, 2]
 ### chunkByTime
 
 ```php
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+use ApolloPY\Eloquent\Traits\UseXEloquentBuilder;
+
+class Topic extends Model
+{
+    use UseXEloquentBuilder;
+}
+
+
 Topic::where('user_id', 1)->chunkByTime(3600, function ($topics) {
     //
 });
