@@ -20,17 +20,6 @@ $posts = $posts->values(); // collection -> [3, 1, 2]
 ### chunkByTime
 
 ```php
-namespace App;
-
-use Illuminate\Database\Eloquent\Model;
-use ApolloPY\Eloquent\Traits\UseEloquentBuilder;
-
-class Topic extends Model
-{
-    use UseEloquentBuilder;
-}
-
-
 Topic::where('user_id', 1)->chunkByTime(3600, function ($topics) {
     //
 });
